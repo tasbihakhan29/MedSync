@@ -1,0 +1,75 @@
+# ============================================================
+# MedSync City — .gitignore
+# ============================================================
+
+# ─── ENVIRONMENT FILES (NEVER push these) ────────────────────
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test.local
+.env.production
+.env.production.local
+*.env
+
+# ─── NODE MODULES (anywhere in project) ──────────────────────
+node_modules/
+**/node_modules/
+
+# ─── BACKEND — Spring Boot ───────────────────────────────────
+
+# Maven build output
+backend/target/
+backend/*.jar
+backend/*.war
+
+# application.properties — contains DB password & API keys
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-prod.properties
+backend/src/main/resources/application-dev.properties
+
+# Logs
+backend/logs/
+*.log
+*.log.*
+
+# ─── FRONTEND — React ────────────────────────────────────────
+
+# Build output
+frontend/build/
+frontend/dist/
+
+# React env files
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ─── IDE / Editor ────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# ─── OS Files ────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Misc ────────────────────────────────────────────────────
+*.class
+*.tmp
+*.bak
+*.orig
+*.zip
